@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 include base_path('routes/about.php');
+include base_path('routes/profile.php');
 
 Route::get('/', function () {
     return view('layouts.main');

@@ -16,9 +16,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/photos">{{ __('Photos') }}</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/about">{{ __('About') }}</a>
                         </li>
                     </ul>

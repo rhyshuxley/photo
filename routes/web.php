@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+include base_path('routes/about.php');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.main');
 });
 
 Auth::routes();

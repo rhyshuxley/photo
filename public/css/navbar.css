@@ -1,0 +1,17 @@
+.navbar .container {
+    width: 70%;
+}
+
+.navbar #navbarSupportedContent {
+    justify-content: space-between;
+}
+
+.logo {
+    position: absolute;
+    left: 170px;
+    top: 1px;
+}
+
+.logo > a > img {
+    max-width: 50px;
+}

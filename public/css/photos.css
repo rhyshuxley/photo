@@ -1,0 +1,8 @@
+.photo{
+    margin: 10px 0;
+}
+
+.photos .col {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}

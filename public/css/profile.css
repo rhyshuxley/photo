@@ -1,0 +1,9 @@
+.profile-avatar img{
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.overlay{
+    right: 14px;
+    top: 28px;
+}

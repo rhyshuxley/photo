@@ -1,0 +1,14 @@
+body {
+    background-color: #f8fafc;
+    min-height: 100%;
+}
+
+.content {
+    padding-top: 6.25rem;
+}
+
+@media (min-width: 768px) {
+    .remember-me {
+        margin-left: 18.4%;
+    }
+}

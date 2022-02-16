@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="content">
-        <div class="container">
+        <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col-sm">
                     <img src="{{ url('images/about/me2.jpg') }}" class="mx-auto d-block" style="max-width: 100%" alt="logo">

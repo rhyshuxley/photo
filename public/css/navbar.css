@@ -4,6 +4,7 @@
 
 .navbar #navbarSupportedContent {
     justify-content: space-between;
+    margin-left: 70px;
 }
 
 .logo {

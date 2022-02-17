@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Photo;
 
 
 use App\Http\Controllers\Controller;
-use App\RHP\Photos\Photo;
+use App\Models\Photo\Photo;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;

@@ -131,7 +131,3 @@ Gallery.defaultProps = {
 };
 export { Photo };
 export default Gallery;
-
-if (document.getElementById('gallery')) {
-    ReactDOM.render(<Gallery />, document.getElementById('gallery'));
-}

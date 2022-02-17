@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Gallery from './Gallery';
 
-const Home = ({photos, direction}) => {
+const Home = () => {
   const data = [
     {
       src: '/images/main/001.jpg',

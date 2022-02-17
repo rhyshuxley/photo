@@ -17,7 +17,7 @@ include base_path('routes/about.php');
 include base_path('routes/profile.php');
 
 Route::get('/', function () {
-    return view('layouts.main');
+    return view('photo.photo');
 });
 
 Auth::routes();

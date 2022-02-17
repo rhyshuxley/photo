@@ -4,13 +4,6 @@
 
 .navbar #navbarSupportedContent {
     justify-content: space-between;
-    margin-left: 70px;
-}
-
-.logo {
-    position: absolute;
-    left: 170px;
-    top: 1px;
 }
 
 .logo > a > img {

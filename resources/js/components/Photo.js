@@ -6,51 +6,51 @@ function Photo() {
     let data = [
         {
             id: 1,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/001.jpg',
         },
         {
             id: 2,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/002.jpg',
         },
         {
             id: 3,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/003.jpg',
         },
         {
             id: 4,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/004.jpg',
         },
         {
             id: 5,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/005.jpg',
         },
         {
             id: 6,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/006.jpg',
         },
         {
             id: 7,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/007.jpg',
         },
         {
             id: 8,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/008.jpg',
         },
         {
             id: 9,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/009.jpg',
         },
         {
             id: 10,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/010.jpg',
         },
         {
             id: 11,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/011.jpg',
         },
         {
             id: 12,
-            imgSrc: 'https://source.unsplash.com/random',
+            imgSrc: '/images/main/012.jpg',
         }
     ]
 

@@ -5,7 +5,7 @@
         <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col-sm">
-                    <img src="{{ url('images/about/me2.jpg') }}" class="mx-auto d-block" style="max-height: 75%; max-width: 90%" alt="logo">
+                    <img src="{{ url('images/about/me2.jpg') }}" class="mx-auto d-block" style="max-height: 70%; max-width: 90%" alt="logo">
                 </div>
                 <div class="col-sm text-left">
                     <p>My name is Rhys, and I am a hobby photographer in Birmingham. I mainly take pictures of landscapes and my cat, Kiki.</p>

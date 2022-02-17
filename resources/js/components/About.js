@@ -4,10 +4,11 @@ import {Carousel} from '3d-react-carousal';
 
 const About = () => {
     const slides = [
-        <img src="/images/main/003.jpg" alt="1" />,
-        <img src="/images/main/004.jpg" alt="2" />,
-        <img src="/images/main/006.jpg" alt="3" />,
-        <img src="/images/main/008.jpg" alt="4" />
+        <img src="/images/carousel/IMG_7832.jpg" alt="1" />,
+        <img src="/images/carousel/IMG_1932.jpg" alt="2" />,
+        <img src="/images/carousel/IMG_7778.jpg" alt="3" />,
+        <img src="/images/carousel/IMG_9066.jpg" alt="4" />,
+        <img src="/images/carousel/IMG_7873.jpg" alt="5" />,
     ];
 
     return (

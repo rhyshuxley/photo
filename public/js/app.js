@@ -5452,17 +5452,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var About = function About() {
   var slides = [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: "/images/main/003.jpg",
+    src: "/images/carousel/IMG_7832.jpg",
     alt: "1"
   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: "/images/main/004.jpg",
+    src: "/images/carousel/IMG_1932.jpg",
     alt: "2"
   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: "/images/main/006.jpg",
+    src: "/images/carousel/IMG_7778.jpg",
     alt: "3"
   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-    src: "/images/main/008.jpg",
+    src: "/images/carousel/IMG_9066.jpg",
     alt: "4"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+    src: "/images/carousel/IMG_7873.jpg",
+    alt: "5"
   })];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_3d_react_carousal__WEBPACK_IMPORTED_MODULE_2__.Carousel, {

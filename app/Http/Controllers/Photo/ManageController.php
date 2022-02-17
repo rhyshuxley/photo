@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Photo;
 
-
 use App\Http\Controllers\Controller;
 use App\Models\Photo\Photo;
 use Illuminate\Http\RedirectResponse;
@@ -14,7 +13,7 @@ class ManageController extends Controller
 {
     public function index(): View
     {
-        return view('manage', ['photos' => Photo::all()]);
+        return view('photo.manage', ['photos' => Photo::all()]);
     }
 
     public function deletePhoto(Request $request): RedirectResponse

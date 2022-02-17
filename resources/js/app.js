@@ -13,5 +13,6 @@ require('./bootstrap');
  */
 
 require('./components/Home');
+require('./components/About');
 require('./components/Gallery');
 require('./components/Photo');

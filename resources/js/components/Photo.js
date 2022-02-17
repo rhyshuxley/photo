@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const imgWithClick = { cursor: 'pointer' };
 
@@ -16,13 +18,15 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key }) => 
   };
 
   return (
-    <img
-      className='js-scroll'
-      key={key}
-      style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
-      {...photo}
-      onClick={onClick ? handleClick : null}
-    />
+    <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+      <img
+        className='js-scroll'
+        key={key}
+        style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
+        {...photo}
+        onClick={onClick ? handleClick : null}
+      />
+    </ScrollAnimation>
   );
 };
 

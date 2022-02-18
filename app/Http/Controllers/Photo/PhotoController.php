@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo\Photo;
 use App\Transformers\PhotoCarouselTransformer;
 use App\Transformers\PhotoMainTransformer;
+use Illuminate\Support\Collection;
 
 class PhotoController extends Controller
 {
-    public function getMain(): array
+    public function getMain(): Collection
     {
         $photos = Photo::select(['id', 'uri', 'width', 'height'])->main()->orderBy('uri')->get();
 
@@ -20,7 +21,7 @@ class PhotoController extends Controller
         return $photos;
     }
 
-    public function getCarousel(): array
+    public function getCarousel(): Collection
     {
         $photos = Photo::select(['id', 'uri'])->carousel()->get();
 

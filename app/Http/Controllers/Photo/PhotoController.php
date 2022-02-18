@@ -9,7 +9,7 @@ use App\Transformers\PhotoMainTransformer;
 
 class PhotoController extends Controller
 {
-    public function getMain()
+    public function getMain(): array
     {
         $photos = Photo::select(['id', 'uri', 'width', 'height'])->main()->orderBy('uri')->get();
 
@@ -20,7 +20,7 @@ class PhotoController extends Controller
         return $photos;
     }
 
-    public function getCarousel()
+    public function getCarousel(): array
     {
         $photos = Photo::select(['id', 'uri'])->carousel()->get();
 

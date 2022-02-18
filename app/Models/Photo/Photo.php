@@ -28,4 +28,19 @@ class Photo extends Model
     {
         return $query->where('folder', 'main');
     }
+
+    public function scopeCarousel(Builder $query): Builder
+    {
+        return $query->where('folder', 'carousel');
+    }
+
+    public function scopeGear(Builder $query): Builder
+    {
+        return $query->where('folder', 'gear');
+    }
+
+    public function scopeProfile(Builder $query): Builder
+    {
+        return $query->where('folder', 'profile');
+    }
 }

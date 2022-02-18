@@ -1,19 +1,24 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import {Carousel} from '3d-react-carousal';
+import Axios from 'axios';
+import { Carousel } from '3d-react-carousal';
 
 const About = () => {
-    const slides = [
-        <img src="/images/carousel/IMG_7832.jpg" alt="1" />,
-        <img src="/images/carousel/IMG_1932.jpg" alt="2" />,
-        <img src="/images/carousel/IMG_7778.jpg" alt="3" />,
-        <img src="/images/carousel/IMG_9066.jpg" alt="4" />,
-        <img src="/images/carousel/IMG_7873.jpg" alt="5" />,
-    ];
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        Axios.get('/api/get-carousel')
+        .then(res => {
+            const items = res.data.map((item) => {
+                return <img src={item.src} />
+            })
+            setData(items)
+        })
+    }, [])
 
     return (
         <div>
-            <Carousel slides={slides} autoplay={false}/>
+            <Carousel slides={data} autoplay={false}/>
         </div>
       );
 }

@@ -14,11 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 include base_path('routes/about.php');
-include base_path('routes/profile.php');
+include base_path('routes/gear.php');
 include base_path('routes/photos.php');
+include base_path('routes/profile.php');
 
 Route::get('/', function () {
     return view('photo.photo');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);

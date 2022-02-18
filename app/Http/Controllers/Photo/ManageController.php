@@ -13,7 +13,8 @@ class ManageController extends Controller
 {
     public function index(): View
     {
-        return view('photo.manage', ['photos' => Photo::all()]);
+        $photos = Photo::orderBy('folder')->orderBy('uri')->get();
+        return view('photo.manage', ['photos' => $photos]);
     }
 
     public function deletePhoto(Request $request): RedirectResponse

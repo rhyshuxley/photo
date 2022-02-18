@@ -28,9 +28,14 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                            <li class="nav-item">
                                     <a class="navbar-brand" href="https://www.instagram.com/rhyshuxleyphotography/" target="_break">
                                         <i class="fab fa-lg fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="navbar-brand" href="https://500px.com/p/rhyshuxley" target="_break">
+                                        <i class="fab fa-lg fa-500px"></i>
                                     </a>
                                 </li>
                             @endif

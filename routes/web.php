@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Home\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +20,6 @@ include base_path('routes/gear.php');
 include base_path('routes/photos.php');
 include base_path('routes/profile.php');
 
-Route::get('/', function () {
-    return view('photo.photo');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes(['register' => false]);

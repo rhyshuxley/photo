@@ -5393,6 +5393,8 @@ __webpack_require__(/*! ./components/Photo */ "./resources/js/components/Photo.j
 
 __webpack_require__(/*! ./components/Gear */ "./resources/js/components/Gear.js");
 
+__webpack_require__(/*! ./components/GearItem */ "./resources/js/components/GearItem.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -5720,40 +5722,98 @@ Gallery.defaultProps = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "GearItem": () => (/* reexport safe */ _GearItem__WEBPACK_IMPORTED_MODULE_2__["default"]),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animate-on-scroll */ "./node_modules/react-animate-on-scroll/dist/scrollAnimation.min.js");
-/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var animate_css_animate_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animate.css/animate.min.css */ "./node_modules/animate.css/animate.min.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _GearItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GearItem */ "./resources/js/components/GearItem.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
-
-
+ // import Axios from 'axios';
 
 
 
 
 var Gear = function Gear() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_2___default()), {
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   Axios.get('/api/get-main')
+  //     .then(res => {
+  //       console.log(res.data)
+  //       setData(res.data)
+  //     })
+  // }, [])
+  var data = [{
+    'id': 1,
+    'name': 'Canon 90D',
+    'photo': "/images/gear/IMG_8293.jpg",
+    'classes': 'd-flex flex-row'
+  }, {
+    'id': 2,
+    'name': 'Sigma 18-50mm f2.8',
+    'photo': "/images/gear/IMG_8296.jpg",
+    'classes': 'd-flex flex-row-reverse'
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: data.map(function (item) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_GearItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        data: item
+      });
+    })
+  });
+};
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Gear);
+
+if (document.getElementById('gear')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Gear, {}), document.getElementById('gear'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/GearItem.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/GearItem.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-animate-on-scroll */ "./node_modules/react-animate-on-scroll/dist/scrollAnimation.min.js");
+/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var animate_css_animate_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animate.css/animate.min.css */ "./node_modules/animate.css/animate.min.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+var GearItem = function GearItem(item) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
     animateIn: "fadeIn",
     animateOnce: true,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "container d-flex justify-content-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "d-flex flex-row",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: item.data.classes,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "col-sm d-flex align-items-center justify-content-center",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-            src: "/images/gear/IMG_8293.jpg",
-            className: "mx-auto d-block gear-photo",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+            src: item.data.photo,
+            className: "js-scroll mx-auto d-block gear-photo",
             alt: "logo"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          "class": "col-sm d-flex align-items-center justify-content-center flex-column",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
-            children: "Canon 90D"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "col-sm d-flex align-items-center justify-content-center flex-column",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+            children: item.data.name
           })
         })]
       })
@@ -5761,11 +5821,7 @@ var Gear = function Gear() {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Gear);
-
-if (document.getElementById('gear')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Gear, {}), document.getElementById('gear'));
-}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GearItem);
 
 /***/ }),
 

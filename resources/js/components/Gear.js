@@ -1,27 +1,46 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
+// import Axios from 'axios';
+import GearItem from './GearItem';
 
 const Gear = () => {
-  return (
-    <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-      <div className="container d-flex justify-content-center">
-        <div className="d-flex flex-row">
-          <div className="col-sm d-flex align-items-center justify-content-center">
-            <img src="/images/gear/IMG_8293.jpg" className="mx-auto d-block gear-photo" alt="logo" />
-          </div>
-          <div class="col-sm d-flex align-items-center justify-content-center flex-column">
-            <h4>Canon 90D</h4>
-          </div>
-        </div>
-      </div>
-    </ScrollAnimation>
-  );
-};
+  // const [data, setData] = useState([]);
 
+  // useEffect(() => {
+  //   Axios.get('/api/get-main')
+  //     .then(res => {
+  //       console.log(res.data)
+  //       setData(res.data)
+  //     })
+  // }, [])
+
+  const data = [
+    {
+      'id': 1,
+      'name': 'Canon 90D',
+      'photo': "/images/gear/IMG_8293.jpg",
+      'classes': 'd-flex flex-row',
+    },
+    {
+      'id': 2,
+      'name': 'Sigma 18-50mm f2.8',
+      'photo': "/images/gear/IMG_8296.jpg",
+      'classes': 'd-flex flex-row-reverse',
+    }
+  ];
+  
+  return (
+    <div>
+      {data.map((item) =>
+        <GearItem data={item}/>
+      )}
+    </div>
+  );
+}
+
+export { GearItem };
 export default Gear;
 
 if (document.getElementById('gear')) {
-  ReactDOM.render(<Gear />, document.getElementById('gear'));
+    ReactDOM.render(<Gear />, document.getElementById('gear'));
 }

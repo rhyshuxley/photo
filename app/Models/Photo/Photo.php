@@ -2,6 +2,7 @@
 
 namespace App\Models\Photo;
 
+use App\Models\Gear\Gear;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -22,6 +23,11 @@ class Photo extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function gear(): BelongsTo
+    {
+        return $this->belongsTo(Gear::class);
     }
     
     public function scopeMain(Builder $query): Builder

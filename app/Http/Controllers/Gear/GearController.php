@@ -11,7 +11,7 @@ class GearController extends Controller
 {
     public function getGear(): Collection
     {
-        $gear = Gear::all();
+        $gear = Gear::query()->orderBy('order')->get();
 
         $gear = $gear->map(function ($gear, $index) {
             return (new GearTransformer)->transform($gear, $index);

@@ -5805,7 +5805,7 @@ var GearItem = function GearItem(item) {
     animateIn: "fadeIn",
     animateOnce: true,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "container d-flex justify-content-center js-scroll",
+      className: "d-flex justify-content-center js-scroll col-md-10 mx-auto",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: item.data.classes,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {

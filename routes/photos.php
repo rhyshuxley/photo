@@ -15,3 +15,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/api/get-main', [PhotoController::class, 'getMain']);
 Route::get('/api/get-carousel', [PhotoController::class, 'getCarousel']);
+Route::get('/api/get-gear', [PhotoController::class, 'getGear']);

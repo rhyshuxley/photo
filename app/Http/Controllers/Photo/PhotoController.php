@@ -31,4 +31,15 @@ class PhotoController extends Controller
 
         return $photos;
     }
+
+    public function getGear(): Collection
+    {
+        $photos = Photo::select(['id', 'uri'])->gear()->get();
+
+        $photos = $photos->map(function ($photo){
+            return (new PhotoGearTransformer)->transform($photo);
+        });
+
+        return $photos;
+    }
 }

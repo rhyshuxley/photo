@@ -9,7 +9,6 @@ const Home = () => {
   useEffect(() => {
     Axios.get('/api/get-main')
       .then(res => {
-        console.log(res.data)
         setData(res.data)
       })
   }, [])

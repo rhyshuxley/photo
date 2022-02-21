@@ -5801,7 +5801,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var GearItem = function GearItem(item) {
-  console.log(item.data);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
     animateIn: "fadeIn",
     animateOnce: true,
@@ -5813,7 +5812,7 @@ var GearItem = function GearItem(item) {
           className: "col-sm d-flex align-items-center justify-content-center",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: item.data.photo,
-            className: "js-scroll mx-auto d-block gear-photo",
+            className: "mx-auto d-block gear-photo",
             alt: "logo"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -5874,7 +5873,6 @@ var Home = function Home() {
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get('/api/get-main').then(function (res) {
-      console.log(res.data);
       setData(res.data);
     });
   }, []);

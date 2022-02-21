@@ -21,9 +21,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/gear">{{ __('Gear') }}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog">{{ __('Blog') }}</a>
-                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

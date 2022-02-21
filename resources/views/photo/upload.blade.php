@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Choose file') }}</div>
                     <div class="card-body px-5">
-                        <form action="{{ route('upload') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('upload-photos') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group button col-md-8 offset-md-2 pl-4">
                                 <input type="text" class="form-control" name="folder" id="folder" placeholder="images/" aria-describedby="file upload to">

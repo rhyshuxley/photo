@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('gears', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->foreign('photo_id')->references('id')->on('photos')->onDelete('cascade')->onUpdate('cascade');
+            $table->bigInteger('photo_id')->nullable();
             $table->integer('order');
             $table->timestamps();
         });

@@ -53,8 +53,11 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/profile">{{ __('Profile') }}</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/manage">{{ __('Manage Photos') }}</a>
-                                    <a class="dropdown-item" href="/upload">{{ __('Upload Photos') }}</a>
+                                    <a class="dropdown-item" href="/manage-photos">{{ __('Manage Photos') }}</a>
+                                    <a class="dropdown-item" href="/manage-gear">{{ __('Manage Gear') }}</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/upload-photos">{{ __('Upload Photos') }}</a>
+                                    <a class="dropdown-item" href="/upload-gear">{{ __('Upload Gear') }}</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

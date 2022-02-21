@@ -11,8 +11,16 @@ class Gear extends Model
 {
     use HasFactory;
 
+    protected $table = 'gears';
+
+    protected $fillable = [
+        'name',
+        'order',
+        'photo_id',
+    ];
+
     public function photo(): HasOne
     {
-        return $this->hasOne(Photo::class);
+        return $this->hasOne(Photo::class, 'id', 'photo_id');
     }
 }

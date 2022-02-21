@@ -16,3 +16,4 @@ require('./components/Home');
 require('./components/About');
 require('./components/Gallery');
 require('./components/Photo');
+require('./components/Gear');

@@ -5754,12 +5754,27 @@ var Gear = function Gear() {
     'name': 'Sigma 18-50mm f2.8',
     'photo': "/images/gear/IMG_8296.jpg",
     'classes': 'd-flex flex-row-reverse'
+  }, {
+    'id': 3,
+    'name': 'Canon 50mm',
+    'photo': "images/gear/IMG_8302.jpg",
+    'classes': 'd-flex flex-row'
+  }, {
+    'id': 4,
+    'name': 'Canon 10-18mm',
+    'photo': "images/gear/IMG_8298.jpg",
+    'classes': 'd-flex flex-row-reverse'
+  }, {
+    'id': 5,
+    'name': 'Canon 70-200mm',
+    'photo': "images/gear/IMG_8300.jpg",
+    'classes': 'd-flex flex-row'
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     children: data.map(function (item) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_GearItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
         data: item
-      });
+      }, item.id);
     })
   });
 };
@@ -5800,7 +5815,7 @@ var GearItem = function GearItem(item) {
     animateIn: "fadeIn",
     animateOnce: true,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "container d-flex justify-content-center",
+      className: "container d-flex justify-content-center js-scroll",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: item.data.classes,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {

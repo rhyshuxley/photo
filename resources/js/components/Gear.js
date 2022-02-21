@@ -26,13 +26,31 @@ const Gear = () => {
       'name': 'Sigma 18-50mm f2.8',
       'photo': "/images/gear/IMG_8296.jpg",
       'classes': 'd-flex flex-row-reverse',
+    },
+    {
+      'id': 3,
+      'name': 'Canon 50mm',
+      'photo': "images/gear/IMG_8302.jpg",
+      'classes': 'd-flex flex-row',
+    },
+    {
+      'id': 4,
+      'name': 'Canon 10-18mm',
+      'photo': "images/gear/IMG_8298.jpg",
+      'classes': 'd-flex flex-row-reverse',
+    },
+    {
+      'id': 5,
+      'name': 'Canon 70-200mm',
+      'photo': "images/gear/IMG_8300.jpg",
+      'classes': 'd-flex flex-row',
     }
   ];
-  
+
   return (
     <div>
       {data.map((item) =>
-        <GearItem data={item}/>
+        <GearItem data={item} key={item.id}/>
       )}
     </div>
   );

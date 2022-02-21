@@ -5,7 +5,7 @@ import "animate.css/animate.min.css";
 const GearItem = (item) => {
   return (
     <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-      <div className="container d-flex justify-content-center">
+      <div className="container d-flex justify-content-center js-scroll">
         <div className={item.data.classes}>
           <div className="col-sm d-flex align-items-center justify-content-center">
             <img src={item.data.photo} className="js-scroll mx-auto d-block gear-photo" alt="logo" />

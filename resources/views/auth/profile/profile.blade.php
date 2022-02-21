@@ -5,16 +5,9 @@
         <div class="row">  
             <div class="col-md-3 mt-3 pt-3">
                 <div class="profile-avatar">
-                    <label for="file-input">
-                        <img src="{{ url('images/logo/logo2.png') }}" class="border border-dark img-responsive rounded-circle" alt="">
-                    </label>
-                    <input id="file-input" type="file" class="d-none"/>
-                </div>
-                <div class="profile-usertitle d-flex justify-content-center">
-                    <div class="profile-usertitle-name">Click picture to edit</div>
+                    <img src="{{ url('images/logo/logo2.png') }}" class="border border-dark img-responsive rounded-circle" alt="">
                 </div>
             </div>
-            <div class="col-md-1"></div>
             <div class="col">
                 <div class="card">
                     <div class="card-header">{{ __('Update Profile') }}</div>

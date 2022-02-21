@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Photo;
 
 use App\Http\Controllers\Controller;
 use App\Models\Photo\Photo;
-use App\Transformers\PhotoCarouselTransformer;
-use App\Transformers\PhotoMainTransformer;
+use App\Transformers\Photo\PhotoCarouselTransformer;
+use App\Transformers\Photo\PhotoMainTransformer;
 use Illuminate\Support\Collection;
 
 class PhotoController extends Controller

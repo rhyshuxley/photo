@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Transformers;
+namespace App\Transformers\Photo;
 
 use App\Models\Photo\Photo;
 use League\Fractal\TransformerAbstract;
 
-class PhotoCarouselTransformer extends TransformerAbstract
+class PhotoMainTransformer extends TransformerAbstract
 {
     public function transform(Photo $photo)
     {
         return [
-            'id' => $photo->id,
             'src' => $photo->uri,
+            'width' => $photo->width,
+            'height' => $photo->height,
         ];
     }
 }

@@ -3,6 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
 const GearItem = (item) => {
+  console.log(item.data);
   return (
     <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
       <div className="container d-flex justify-content-center js-scroll">

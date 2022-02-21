@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Photo;
 
 use App\Http\Controllers\Controller;
 use App\Models\Photo\Photo;
-use App\Transformers\PhotoCarouselTransformer;
-use App\Transformers\PhotoMainTransformer;
+use App\Transformers\Photo\PhotoCarouselTransformer;
+use App\Transformers\Photo\PhotoMainTransformer;
 use Illuminate\Support\Collection;
 
 class PhotoController extends Controller
@@ -27,17 +27,6 @@ class PhotoController extends Controller
 
         $photos = $photos->map(function ($photo){
             return (new PhotoCarouselTransformer)->transform($photo);
-        });
-
-        return $photos;
-    }
-
-    public function getGear(): Collection
-    {
-        $photos = Photo::select(['id', 'uri'])->gear()->get();
-
-        $photos = $photos->map(function ($photo){
-            return (new PhotoGearTransformer)->transform($photo);
         });
 
         return $photos;

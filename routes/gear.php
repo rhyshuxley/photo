@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Gear\GearController;
 use App\Http\Controllers\Gear\ManageController;
 use App\Http\Controllers\Gear\UploadController;
-use App\Http\Controllers\Photo\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/gear', function () {
@@ -17,4 +17,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/deleteGear', [ManageController::class, 'deleteGear'])->name('deleteGear');
 });
 
-Route::get('/api/get-gear', [PhotoController::class, 'getGear']);
+Route::get('/api/get-gear', [GearController::class, 'getGear']);

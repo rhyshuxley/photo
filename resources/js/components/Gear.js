@@ -1,51 +1,17 @@
 import { React, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-// import Axios from 'axios';
+import Axios from 'axios';
 import GearItem from './GearItem';
 
 const Gear = () => {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   Axios.get('/api/get-main')
-  //     .then(res => {
-  //       console.log(res.data)
-  //       setData(res.data)
-  //     })
-  // }, [])
-
-  const data = [
-    {
-      'id': 1,
-      'name': 'Canon 90D',
-      'photo': "/images/gear/IMG_8293.jpg",
-      'classes': 'd-flex flex-row',
-    },
-    {
-      'id': 2,
-      'name': 'Sigma 18-50mm f2.8',
-      'photo': "/images/gear/IMG_8296.jpg",
-      'classes': 'd-flex flex-row-reverse',
-    },
-    {
-      'id': 3,
-      'name': 'Canon 50mm',
-      'photo': "images/gear/IMG_8302.jpg",
-      'classes': 'd-flex flex-row',
-    },
-    {
-      'id': 4,
-      'name': 'Canon 10-18mm',
-      'photo': "images/gear/IMG_8298.jpg",
-      'classes': 'd-flex flex-row-reverse',
-    },
-    {
-      'id': 5,
-      'name': 'Canon 70-200mm',
-      'photo': "images/gear/IMG_8300.jpg",
-      'classes': 'd-flex flex-row',
-    }
-  ];
+  useEffect(() => {
+    Axios.get('/api/get-gear')
+      .then(res => {
+        setData(res.data)
+      })
+  }, [])
 
   return (
     <div>

@@ -15,7 +15,7 @@ const Home = () => {
   
   return (
     <div>
-        <Gallery photos={data} direction="row" margin="3" targetRowHeight="400"/>
+        <Gallery photos={data} direction="row" margin={3} targetRowHeight={400}/>
     </div>
   );
 }

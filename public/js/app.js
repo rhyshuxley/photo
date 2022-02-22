@@ -5880,8 +5880,8 @@ var Home = function Home() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Gallery__WEBPACK_IMPORTED_MODULE_3__["default"], {
       photos: data,
       direction: "row",
-      margin: "3",
-      targetRowHeight: "400"
+      margin: 3,
+      targetRowHeight: 400
     })
   });
 };

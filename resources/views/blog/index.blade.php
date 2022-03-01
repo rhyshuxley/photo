@@ -6,30 +6,15 @@
             <div class="d-flex justify-content-center">
                 <h2>Blogs</h2>
             </div>
-            <div class="d-flex">
-                <article>
-                    <h4><a href="/blog/article-1">Article 1</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex ad qui sint fugit, iusto nemo rerum aliquam accusamus laborum, voluptates quod eum corporis et, molestiae magnam consectetur quisquam atque.</p>
-                </article>
-            </div>
-            <div class="d-flex">
-                <article>
-                    <h4><a href="/blog/article-1">Article 2</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex ad qui sint fugit, iusto nemo rerum aliquam accusamus laborum, voluptates quod eum corporis et, molestiae magnam consectetur quisquam atque.</p>
-                </article>
-            </div>
-            <div class="d-flex">
-                <article>
-                    <h4><a href="/blog/article-1">Article 3</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex ad qui sint fugit, iusto nemo rerum aliquam accusamus laborum, voluptates quod eum corporis et, molestiae magnam consectetur quisquam atque.</p>
-                </article>
-            </div>
-            <div class="d-flex">
-                <article>
-                    <h4><a href="/blog/article-1">Article 4</a></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex ad qui sint fugit, iusto nemo rerum aliquam accusamus laborum, voluptates quod eum corporis et, molestiae magnam consectetur quisquam atque.</p>
-                </article>
-            </div>
+            @foreach ($posts as $post)
+                <div class="d-flex">
+                    <article>
+                        <h4><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h4>
+                        <p>{{ $post->published_at }}</p>
+                        <p>{{ $post->excerpt }}</p>
+                    </article>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

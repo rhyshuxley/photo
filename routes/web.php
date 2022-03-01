@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 include base_path('routes/about.php');
+include base_path('routes/blog.php');
 include base_path('routes/gear.php');
 include base_path('routes/photos.php');
 include base_path('routes/profile.php');

@@ -10,6 +10,19 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'slug',
+        'summary',
+        'excerpt',
+        'content_id',
+    ];
+
+    protected $dates = [
+        'published_at',
+        'deleted_at',
+    ];
+
     public function scopePublished(Builder $query)
     {
         return $query

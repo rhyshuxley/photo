@@ -12,8 +12,12 @@ class BlogController extends Controller
         return view('blog.index');
     }
 
-    public function show(): View
+    public function show(string $slug): View
     {
-        return view('blog.show');
+        $post = Post::find($slug);
+
+        return view('blog.show', [
+            'post' => $post,
+        ]);
     }
 }

@@ -3,6 +3,11 @@
 use App\Http\Controllers\Blog\BlogController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/blog', [BlogController::class, 'index']);
-
-Route::get('/blog/post', [BlogController::class, 'show']);
+Route::group([
+    'as' => 'blog.',
+    'prefix' => 'blog/',
+], function () {
+    Route::get('/', [BlogController::class, 'index']);
+    
+    Route::get('/{slug}', [BlogController::class, 'show'])->where('postId', '[A-z0-9\-]+');
+});

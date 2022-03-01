@@ -9,5 +9,5 @@ Route::group([
 ], function () {
     Route::get('/', [BlogController::class, 'index']);
     
-    Route::get('/{post:slug}', [BlogController::class, 'show'])->where('postId', '[A-z0-9\-]+');
+    Route::get('/{post:slug}', [BlogController::class, 'show']);
 });

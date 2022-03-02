@@ -3,6 +3,9 @@
 @section('content')
     <div class="content">
         <div class="container d-flex flex-column justify-content-center text-align-center mt-4">
+            <div class="d-flex pb-4">
+                <a href="/story" class="story-back"><i class="fa fa-solid fa-angle-left"></i> Stories</a>
+            </div>
             @foreach ($posts as $post)
                 <div class="d-flex flex-row story-card">
                     <a href="/story/{{ $post->slug }}" class="story-link"></a>

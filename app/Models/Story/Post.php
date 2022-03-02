@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Models\Blog;
+namespace App\Models\Story;
 
+use App\Models\Story\Content;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Post extends Model
 {
@@ -23,7 +26,12 @@ class Post extends Model
         'deleted_at',
     ];
 
-    public function scopePublished(Builder $query)
+    public function contents(): HasMany
+    {
+        return $this->hasMany(Content::class);
+    }
+
+    public function scopePublished(Builder $query): Collection
     {
         return $query
             ->whereNotNull('published_at')

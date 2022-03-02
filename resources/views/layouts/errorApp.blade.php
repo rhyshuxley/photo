@@ -3,7 +3,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-            <div class="logo">
+                <div class="logo">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ url('images/logo/logo.png') }}" alt="Rhys Huxley Logo">
                     </a>
@@ -15,14 +15,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about">{{ __('About') }}</a>
-                        </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="/gear">{{ __('Gear') }}</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="/blog">{{ __('Blog') }}</a>
+                            <a class="nav-link" href="/story">{{ __('Stories') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">{{ __('About') }}</a>
                         </li>
                     </ul>
 

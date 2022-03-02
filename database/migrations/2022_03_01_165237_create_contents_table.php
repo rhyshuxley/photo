@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('photo_id')->nullable();
+            $table->bigInteger('post_id')->nullable();
             $table->text('caption');
+            $table->bigInteger('photo_id')->nullable();
             $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });

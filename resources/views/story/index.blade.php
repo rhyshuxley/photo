@@ -29,11 +29,15 @@
                 @if (!$loop->last)
                     <hr class="story-hr">
                 @endif
+                
             @empty
                 <div class="d-flex flex-row justify-content-center">
                     <p>No stories found!</p>
                 </div>
             @endforelse
+            <div class="page-links d-flex justify-content-center pt-3">
+                {!! $posts->links() !!}
+            </div>
         </div>
     </div>
 @endsection

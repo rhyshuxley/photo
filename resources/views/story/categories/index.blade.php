@@ -25,6 +25,9 @@
                     <hr class="story-hr">
                 @endif
             @endforeach
+            <div class="page-links d-flex justify-content-center pt-3">
+                {!! $posts->links() !!}
+            </div>
         </div>
     </div>
 @endsection

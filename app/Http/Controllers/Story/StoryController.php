@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Story;
 
 use App\Http\Controllers\Controller;
 use App\Models\Story\Post;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\View\View;
 
 class StoryController extends Controller
 {
+    protected const PER_PAGE = 3;
+
     public function index(): View
     {
         return view('story.index', [
@@ -23,8 +25,10 @@ class StoryController extends Controller
         ]);
     }
 
-    public function getAllPosts(array $filters): Collection
+    public function getAllPosts(array $filters): LengthAwarePaginator
     {
-        return Post::search($filters)->published()->get();
+        return Post::search($filters)
+            ->published()
+            ->paginate(self::PER_PAGE);
     }
 }

@@ -8,10 +8,12 @@ use Illuminate\View\View;
 
 class CategoryController extends Controller
 {
+    protected const PER_PAGE = 3;
+
     public function show(Category $category): View
     {
         return view('story.categories.index', [
-            'posts' => $category->posts,
+            'posts' => $category->posts()->paginate(self::PER_PAGE),
         ]);
     }
 }

@@ -78,5 +78,12 @@
     color: white;
 }
 
-.story-search {
+.page-item.active .page-link {
+    background-color: grey;
+    border-color: grey;
+}
+
+.page-link,
+.page-link:hover {
+    color: grey;
 }

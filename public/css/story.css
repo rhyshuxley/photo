@@ -22,17 +22,12 @@
 
 .story-back:hover {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
 }
 
 .story-link {
     text-decoration: none;
     color: black;
-}
-
-.story-link:hover {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.55);
 }
 
 .story-card-img {

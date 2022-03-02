@@ -16,7 +16,7 @@
                         <article>
                             <h4>{{ $post->title }}</h4>
                             <p>{{ $post->published_at->format('jS F Y') }}</p>
-                            <p class="category"><a href="/categories/{{ $post->category->slug }}" class="category-link">{{ $post->category->name }}</a></p>
+                            <p class="category"><span class="category-link">{{ $post->category->name }}</span></p>
                             <p>{{ $post->excerpt }}</p>
                         </article>
                     </div>

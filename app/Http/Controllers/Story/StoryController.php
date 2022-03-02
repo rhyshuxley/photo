@@ -11,7 +11,7 @@ class StoryController extends Controller
     public function index(): View
     {
         return view('story.index', [
-            'posts' => Post::published(),
+            'posts' => Post::with('category')->published(),
         ]);
     }
 

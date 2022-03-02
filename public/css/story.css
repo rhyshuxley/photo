@@ -1,0 +1,36 @@
+.story-card {
+    height: 130px;
+}
+
+.story-link {
+    text-decoration: none;
+    color: black;
+}
+
+.story-link:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.story-card-img {
+    flex: 0 0 auto;
+    width: 20% !important;
+    align-items: center;
+}
+
+.story-list-photo {
+    max-height: 80%;
+}
+
+.post-title {
+    margin-bottom: 40px !important;
+}
+
+.content-image img {
+    width: 60%;
+    margin: 40px 0px;
+}
+
+.story-hr {
+    margin-bottom: 30px;
+}

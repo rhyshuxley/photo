@@ -19,6 +19,7 @@ include base_path('routes/about.php');
 include base_path('routes/gear.php');
 include base_path('routes/photos.php');
 include base_path('routes/profile.php');
+include base_path('routes/story.php');
 
 Route::get('/', [HomeController::class, 'index']);
 

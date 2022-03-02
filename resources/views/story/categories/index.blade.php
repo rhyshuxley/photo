@@ -10,7 +10,7 @@
                 <div class="d-flex flex-row story-card">
                     <a href="/story/{{ $post->slug }}" class="story-link"></a>
                     <div class="d-flex col story-card-img">
-                        <img class="story-list-photo" src="{{ url($post->contents()->first()->photo()->uri) }}" />
+                        <img class="story-list-photo" src="{{ url($post->primaryContent()->photo->uri) }}" />
                     </div>
                     <div class="d-flex col align-items-baseline">
                         <article>

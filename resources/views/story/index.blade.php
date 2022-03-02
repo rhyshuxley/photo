@@ -2,13 +2,16 @@
 
 @section('content')
     <div class="content">
-        <div class="container d-flex flex-column justify-content-center text-align-center mt-4">
+        <div class="container d-flex flex-column justify-content-center text-align-center">
             <div class="search d-flex flex-row justify-content-end pb-4">
                 <form method="GET" action="#">
-                    <input type="text" name="search" class="story-search" placeholder="Search">
+                    <div class="input-group">
+                        <input type="text" name="search" class="story-search input-group-text" placeholder="Search">
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </div>
                 </form>
             </div>
-            @foreach ($posts as $post)
+            @forelse ($posts as $post)
                 <div class="d-flex flex-row story-card">
                     <a href="/story/{{ $post->slug }}" class="story-link"></a>
                     <div class="d-flex col story-card-img">
@@ -26,7 +29,11 @@
                 @if (!$loop->last)
                     <hr class="story-hr">
                 @endif
-            @endforeach
+            @empty
+                <div class="d-flex flex-row justify-content-center">
+                    <p>No stories found!</p>
+                </div>
+            @endforelse
         </div>
     </div>
 @endsection

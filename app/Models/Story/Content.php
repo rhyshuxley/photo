@@ -21,13 +21,17 @@ class Content extends Model
         'deleted_at',
     ];
 
+    protected $with = [
+        'photo',
+    ];
+
     public function post(): BelongsTo
     {
         return $this->belongsTo(Post::class);
     }
 
-    public function photo(): Photo
+    public function photo(): BelongsTo
     {
-        return $this->belongsTo(Photo::class)->first();
+        return $this->belongsTo(Photo::class);
     }
 }

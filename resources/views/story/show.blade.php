@@ -14,7 +14,7 @@
                     <p>{{ $post->summary }}</p>
                     @foreach ($post->contents as $content)
                         <div class="d-flex align-items-center justify-content-center content-image">
-                            <img src="{{ url($content->photo()->uri) }}" />
+                            <img src="{{ url($content->photo->uri) }}" />
                         </div>
                         <p>{{ $content->caption }}</p>
                     @endforeach

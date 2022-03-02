@@ -13,7 +13,9 @@ class CategoryController extends Controller
     public function show(Category $category): View
     {
         return view('story.categories.index', [
-            'posts' => $category->posts()->paginate(self::PER_PAGE),
+            'posts' => $category
+                ->posts()
+                ->paginate(self::PER_PAGE),
         ]);
     }
 }

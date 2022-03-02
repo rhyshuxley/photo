@@ -1,5 +1,28 @@
 .story-card {
-    height: 130px;
+    height: 160px;
+    position: relative;
+}
+
+.story-card p {
+    margin-bottom: 0.5rem !important;
+}
+
+.story-card .story-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.story-back {
+    text-decoration: none;
+    color: black;
+}
+
+.story-back:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.55);
 }
 
 .story-link {
@@ -14,12 +37,11 @@
 
 .story-card-img {
     flex: 0 0 auto;
-    width: 20% !important;
-    align-items: center;
+    width: 22% !important;
 }
 
 .story-list-photo {
-    max-height: 80%;
+    max-height: 90%;
 }
 
 .post-title {
@@ -33,4 +55,30 @@
 
 .story-hr {
     margin-bottom: 30px;
+}
+
+.story-card .category {
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.story-card .category a {
+    pointer-events: all;
+}
+
+.category-link {
+    background-color: grey;
+    color: white;
+    padding: 3px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.category-link:hover {
+    background-color: rgb(51, 49, 49);
+    color: white;
 }
